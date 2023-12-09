@@ -1,12 +1,12 @@
-# Cell detection in large 3D brain samples
+## Cell detection in large 3D brain samples
 
 This repository provides Python code for the improvement of the detection of neurons in large brain samples, as described here (add link to paper).
 
-First, an initial guess of cell candidates is made using the [ClearMap 1.0](https://github.com/ChristophKirst/ClearMap) framework based on a supervised pixel-wise Ilastik classifier. This part of the detection code is not provided with this repository.
+First, a **cell segmentation**. An initial guess of cell candidates is made using the ClearMap 1.0 [link](https://github.com/ChristophKirst/ClearMap) framework based on a supervised pixel-wise Ilastik classifier [link](https://www.ilastik.org/). This part of the detection code is not provided with this repository.
 
-Second, the initial cell candidate guesses are refined based on a peak finder that uses local gradient search to find local maxima. Spurious multiple detections of the same cell are thereby merged together.
+Second, a **gradient-based cell merger**. The initial cell candidate guesses are refined based on a peak finder that uses local gradient search to find local maxima. Spurious multiple detections of the same cell are thereby merged together.
 
-Third, the refined cell candidates are visually classified into cells and non-cells. To this end, a supervised convolutional network has been train on manually annotated data.
+Third, a **supervised cell classifier**. The refined cell candidates are visually classified into cells and non-cells. To this end, a supervised convolutional network has been train on manually annotated data.
 
 <!---![Pipeline for reliable cell detection](https://github.com/PTRRupprecht/Cell_Detection/blob/main/Overview_pipeline.png)--->
 <p align="center"><img src="https://github.com/PTRRupprecht/Cell_Detection/blob/main/Overview_pipeline.png"  width="35%"></p>
