@@ -15,4 +15,4 @@ The algorithms and code together with example data, ground truth and pretrained 
 
 In addition, we provide a tool for [manual annotation of cells vs. non-cells](https://github.com/PTRRupprecht/Cell_Detection/tree/main/Label_tool).
 
-Comments and questions are welcome as Github issues or as emails to [ptrrupprecht+celldetection@gmail.com](mailto:ptrrupprecht+celldetection@gmail.com).
+Comments and questions are welcome as Github issues or via [email](mailto:ptrrupprecht+celldetection@gmail.com).
