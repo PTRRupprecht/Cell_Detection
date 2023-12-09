@@ -9,6 +9,6 @@ Three networks for different sections (xy, xz, yz) are combined by adding their 
 
 The results from an ensemble of 5 models for each network type (xy, xz, yz) are combined to yield a more confident predictions about cell vs. non-cell.
 
-`Train_binary_classification_2DCNN.py` trains all models. Training and inference was performed in in Python 3.7.12 with Torch 1.12.1.post201 with GPU support. However, due to the low complexity of this deep network model, most standard installations of Torch are likely to work as well.
+`Train_binary_classification_2DCNN.py` trains all models. Training and inference was performed in in Python 3.7.12 with Torch 1.12.1.post201 with GPU support. However, due to the low complexity of this deep network model, most standard installations of Torch are likely to work as well. Ground truth (1900 manually annotated cell candidates) can be found in the [ground truth data folder](https://github.com/PTRRupprecht/Cell_Detection/tree/main/Binary_classification_neuron_candidates/ground_truth_data). Pretrained models can be found in the [pretrained models folder](https://github.com/PTRRupprecht/Cell_Detection/tree/main/Binary_classification_neuron_candidates/trained_models).
 
 `Apply_binary_classification_2DCNN.py` applies the trained network to new data. The example script applies the trained network to the already existing training data for the sake of simplicity.
