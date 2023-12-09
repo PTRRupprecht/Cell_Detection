@@ -36,7 +36,7 @@ import copy
 
 """
 
-Lead training and validation data
+Load training and validation data
 
 """
 
@@ -132,6 +132,7 @@ Train models for xy
 
 """
 
+augmentation = 0
 
 while len(glob.glob(os.path.join(model_folder,'Model_xy_aug_*'))) < 5:
 
