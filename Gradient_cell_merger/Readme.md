@@ -1,1 +1,5 @@
-Text comes here...
+## Python script to refine list of detected cells
+
+The purpose of this code is to use a list of cell candidates as input, and refine the list based on the raw data using gradient-based merging of splitter cells and discarding of non-cells using a supervised classifier. For the supervised classifier, [pretrained models](https://github.com/PTRRupprecht/Cell_Detection/tree/main/Binary_classification_neuron_candidates) are used (available via this repository). Gradient-based merging is directly implemented in the code; the gradient search acts in 3D in a local environment around the cell candidate location.
+
+The scripts require two outputs from an initial cell detection algorithm (e.g., ClearMap). First, the raw file is required (tif stack). Next, the list of detected cells is required (npy file). The format of cell locations is basically a `N x 3` array with the 3D coordinates of each cell candidate, as is the default output from ClearMap. If you have questions or need guidance in adapting this code for your purpose, get in touch with us via Github issues or via [email](mailto:ptrrupprecht+celldetection@gmail.com).
