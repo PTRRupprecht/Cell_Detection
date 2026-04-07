@@ -1,6 +1,6 @@
 ## Cell detection in large 3D brain samples
 
-This repository provides Python code for the improvement of the detection of neurons in large brain samples, as described here (*add link to paper once it is online*).
+This repository provides Python code for the improvement of the detection of neurons in large brain samples, as described in this paper: [aDISCO: A clearing method to enable 3D microscopy of large archival paraffin-embedded human tissue blocks](https://www.biorxiv.org/content/10.1101/2025.05.21.655358v3).
 
 First, a **cell segmentation**. An initial guess of cell candidates is made using the ClearMap 1.0 ([link](https://github.com/ChristophKirst/ClearMap)) framework based on a supervised pixel-wise Ilastik classifier ([link](https://www.ilastik.org/)). This part of the detection code is not provided within this repository.
 
