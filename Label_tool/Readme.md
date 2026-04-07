@@ -1,6 +1,6 @@
 ## Interactive labeling of cell candidates into cells and non-cells
 
-We provide a simple interactive Python tool to label cell candidates as cells or non-cells. This manual annotation is then used to train a [supervised cell-classifier](https://github.com/PTRRupprecht/Cell_Detection/tree/main/Binary_classification_neuron_candidates) based on convolutional deep networks. As described there, the input for classification/manual labeling is a local 3D environment around each cell of `91 x 31 x 31` pixels.
+We provide a simple interactive Python tool to label cell candidates as cells or non-cells. This manual annotation is then used to train a [supervised cell-classifier](https://github.com/PTRRupprecht/Cell_Detection/tree/main/Binary_classification_neuron_candidates) based on convolutional deep networks. As described there, the input for classification/manual labeling is a local 3D environment around each cell of `91 x 31 x 31` pixels. The annotated dataset is part of this GitHub repository ([link](https://github.com/PTRRupprecht/Cell_Detection/tree/main/Binary_classification_neuron_candidates/ground_truth_data)).
 
 Two orthogonal cross-sections (left: xz, right: xy) are simultaneously viewed to enable a well-informed decision whether the inspected cell candidate is a cell or not:
 
