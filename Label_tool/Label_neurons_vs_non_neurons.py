@@ -158,9 +158,66 @@ for filename in filenames:
     
 
 
-    
-## Browse through neuron candidates
-        
 
+        
+## Check accuracy of two sets of annotations with accuracy and Cohen's kappa 
+
+import numpy as np
+import glob
+import os
+from sklearn.metrics import confusion_matrix, accuracy_score, precision_score, recall_score, f1_score, cohen_kappa_score
+
+folder = '/home/helios/Desktop/Cell_Detection/Binary_classification_neuron_candidates/ground_truth_data'
+os.chdir(folder)
+
+# Build dictionary: base filename -> file
+files_1 = {f.replace('_scored.npy',''): f for f in glob.glob('*selected_cells_scored.npy')}
+files_2 = {f.replace('_scored_by_person_X.npy',''): f for f in glob.glob('*selected_cells_scored_by_person_X.npy')}
+
+# Find overlap
+common_keys = sorted(set(files_1.keys()) & set(files_2.keys()))
+
+print(f"Found {len(common_keys)} matching files")
+
+all_y1 = []
+all_y2 = []
+
+for key in common_keys:
+    f1 = files_1[key]
+    f2 = files_2[key]
+    
+    y1 = np.load(f1)
+    y2 = np.load(f2)
+    
+    if len(y1) != len(y2):
+        print(f"Size mismatch in {key}: {len(y1)} vs {len(y2)} — skipping")
+        continue
+    
+    all_y1.extend(y1)
+    all_y2.extend(y2)
+
+y1 = np.array(all_y1)
+y2 = np.array(all_y2)
+
+print(f"Total compared samples: {len(y1)}")
+
+# --- Metrics ---
+cm = confusion_matrix(y1, y2)
+acc = accuracy_score(y1, y2)
+prec = precision_score(y1, y2, zero_division=0)
+rec = recall_score(y1, y2, zero_division=0)
+f1 = f1_score(y1, y2, zero_division=0)
+kappa = cohen_kappa_score(y1, y2)
+
+print("\nConfusion Matrix:")
+print(cm)
+
+print("\nMetrics:")
+print(f"Accuracy:        {acc:.3f}")
+print(f"Precision:       {prec:.3f}")
+print(f"Recall:          {rec:.3f}")
+print(f"F1 score:        {f1:.3f}")
+print(f"Cohen's kappa:   {kappa:.3f}")
+    
     
     
