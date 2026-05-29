@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/723024363.svg)](https://doi.org/10.5281/zenodo.20443376)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20443376-blue.svg)](https://doi.org/10.5281/zenodo.20443376)
 ## Cell detection in large 3D brain samples
 
 This repository provides Python code for the improvement of the detection of neurons in large brain samples, as described in this paper: [aDISCO: A clearing method to enable 3D microscopy of large archival paraffin-embedded human tissue blocks](https://www.biorxiv.org/content/10.1101/2025.05.21.655358v3).
