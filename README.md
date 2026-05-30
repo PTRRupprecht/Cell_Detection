@@ -1,4 +1,7 @@
 [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20443376-blue.svg)](https://doi.org/10.5281/zenodo.20443376)
+[![License](https://img.shields.io/badge/License-GPL--3.0-brightgreen)](https://github.com/PTRRupprecht/Cell_Detection/blob/master/LICENSE)
+[![Size](https://img.shields.io/github/repo-size/PTRRupprecht/Cell_Detection?style=plastic)](https://github.com/PTRRupprecht/Cell_Detection)
+[![Language](https://img.shields.io/github/languages/top/PTRRupprecht/Cell_Detection?style=plastic)](https://github.com/PTRRupprecht/Cell_Detection)
 ## Cell detection in large 3D brain samples
 
 This repository provides Python code for the improvement of the detection of neurons in large brain samples, as described in this paper: [aDISCO: A clearing method to enable 3D microscopy of large archival paraffin-embedded human tissue blocks](https://www.biorxiv.org/content/10.1101/2025.05.21.655358v3).
